@@ -10,7 +10,10 @@
         :name="name"
         :placeholder="placeholder"
         :disabled="disabled"
-        @input="$emit('input', $event.target.value)"/>
+        @input="$emit('input', $event.target.value)"
+        @focus="$emit('focus', $event.target.value)"
+        @blur="$emit('blur', $event.target.value)"
+        @change="$emit('change', $event)"/>
         <!-- @click.native 表示点击的是原生的点击事件 -->
         <!-- @mousedown.native.prevent 阻止原生的默认事件 即清空完焦点还在 -->
     <wxh-element-icon
